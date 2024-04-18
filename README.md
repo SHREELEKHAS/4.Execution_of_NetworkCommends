@@ -28,6 +28,7 @@ This commands includes
 <BR>
 
 ## Program:
+### PING:
 ```
 server.py
 import socket
@@ -60,7 +61,14 @@ while True:
         c.send("Not Found".encode())
 
 ```
+## TRACERT:
+```
+from scapy.all import*
+target = ["www.google.com"]
+result, unans = traceroute(target,maxttl=32)
+print(result,unans)
 
+```
 ## PING command:
 ## PING Program:
 ![Screenshot 2024-04-19 001123](https://github.com/SHREELEKHAS/4.Execution_of_NetworkCommends/assets/149768910/73761097-07f8-48ac-b9a7-1c63a11cb748)
